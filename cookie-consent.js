@@ -13,7 +13,7 @@
    ===================================================================== */
 (function(){
   "use strict";
-  var KEY = "clinic_cookie_consent", VER = 1;
+  var KEY = "clinic_cookie_consent", VER = 1, MAX_AGE = 182*24*3600*1000; /* 6 months */
   var CATS = [
     {id:"functional", label:"Λειτουργικά", desc:"Απομνημόνευση προτιμήσεων & ενσωματώσεις (π.χ. χάρτης)."},
     {id:"statistics", label:"Στατιστικά", desc:"Ανώνυμη μέτρηση επισκεψιμότητας."},
@@ -21,7 +21,7 @@
   ];
 
   function read(){
-    try{ var v = JSON.parse(localStorage.getItem(KEY)); return (v && v._v===VER) ? v : null; }
+    try{ var v = JSON.parse(localStorage.getItem(KEY)); return (v && v._v===VER && !(v.ts && Date.now()-Date.parse(v.ts) > MAX_AGE)) ? v : null; }
     catch(e){ return null; }
   }
   function save(obj){
