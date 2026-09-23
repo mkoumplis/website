@@ -182,33 +182,17 @@
       <div class="reveal">
         <div class="kicker"><span class="num">05</span> Ραντεβού</div>
         <h2>Online <em>ραντεβού</em></h2>
-        <p class="clead">Κλείστε online το ραντεβού σας, επιλέγοντας ημέρα και ώρα μέσα στο ωράριο του ιατρείου, ή στείλτε ένα αίτημα μέσω email. Τα ραντεβού διαρκούν 30 λεπτά και επιβεβαιώνονται από το ιατρείο.</p>
+        <p class="clead">Κλείστε online το ραντεβού σας, επιλέγοντας ημέρα και ώρα από το ημερολόγιο διαθεσιμότητας του ιατρού, ή στείλτε ένα αίτημα μέσω email. Τα ραντεβού διαρκούν 30 λεπτά και θα λάβετε επιβεβαίωση στο email σας.</p>
         <ul class="cinfo">
           <li><a href="mailto:miltoskoumplis@gmail.com?subject=%CE%91%CE%AF%CF%84%CE%B7%CE%BC%CE%B1%20%CE%B7%CE%BB%CE%B5%CE%BA%CF%84%CF%81%CE%BF%CE%BD%CE%B9%CE%BA%CE%BF%CF%8D%20%CF%81%CE%B1%CE%BD%CF%84%CE%B5%CE%B2%CE%BF%CF%8D&body=%CE%9F%CE%BD%CE%BF%CE%BC%CE%B1%CF%84%CE%B5%CF%80%CF%8E%CE%BD%CF%85%CE%BC%CE%BF%3A%0A%CE%A4%CE%B7%CE%BB%CE%AD%CF%86%CF%89%CE%BD%CE%BF%3A%0A%CE%95%CF%80%CE%B9%CE%B8%CF%85%CE%BC%CE%B7%CF%84%CE%AE%20%CE%B7%CE%BC%CE%AD%CF%81%CE%B1%2F%CF%8E%CF%81%CE%B1%3A%0A%CE%9B%CF%8C%CE%B3%CE%BF%CF%82%20%CE%B5%CF%80%CE%AF%CF%83%CE%BA%CE%B5%CF%88%CE%B7%CF%82%3A"><span class="ci-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span><div><b>Ηλεκτρονικό αίτημα</b><span>Αποστολή μέσω email στο ημερολόγιο ραντεβού</span></div></a></li>
           <li><a href="tel:+302311242526"><span class="ci-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg></span><div><b>2311 24 25 26</b><span>Άμεση τηλεφωνική επιβεβαίωση</span></div></a></li>
           <li><a href="tel:+306974091881"><span class="ci-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg></span><div><b>6974 091 881</b><span>Κινητό · για επείγοντα περιστατικά</span></div></a></li>
         </ul>
       </div>
-      <div class="booking-card reveal" id="bookingCard">
-        <h3>Online κλείσιμο ραντεβού</h3>
-        <p class="bk-summary" id="bkSummary" aria-live="polite">Επιλέξτε ημέρα και ώρα.</p>
-        <div class="bk-step">1 · Ημέρα</div>
-        <div class="bk-days" id="bkDays" role="group" aria-label="Διαθέσιμες ημέρες"></div>
-        <div class="bk-step">2 · Ώρα <span>ραντεβού 30΄</span></div>
-        <div class="bk-slots" id="bkSlots" role="group" aria-label="Διαθέσιμες ώρες"></div>
-        <form novalidate>
-          <div class="bk-step">3 · Στοιχεία</div>
-          <div class="bk-fields">
-            <label>Ονοματεπώνυμο *<input name="name" autocomplete="name" required /></label>
-            <label>Τηλέφωνο *<input name="phone" type="tel" autocomplete="tel" inputmode="tel" required /></label>
-            <label>Email<input name="email" type="email" autocomplete="email" /></label>
-            <label>Λόγος επίσκεψης<select name="reason"><option>Γυναικολογικός έλεγχος</option><option>Παρακολούθηση κύησης</option><option>Τεστ Παπ / HPV</option><option>Κολποσκόπηση</option><option>Γυναικολογικός υπέρηχος</option><option>Άλλο</option></select></label>
-          </div>
-          <label class="bk-consent"><input type="checkbox" name="consent" required /><span>Έχω διαβάσει την <a href="legal/privacy.html">Πολιτική Απορρήτου</a> και συναινώ στη χρήση των στοιχείων μου αποκλειστικά για τον προγραμματισμό του ραντεβού.</span></label>
-          <button class="btn primary" type="submit">Κλείσιμο ραντεβού</button>
-          <p class="bk-error" id="bkError" role="alert" hidden></p>
-          <div class="bk-done" id="bkDone" hidden>Άνοιξε το email με το ραντεβού σας για <b></b>. Πατήστε «Αποστολή» για να ολοκληρωθεί και το ιατρείο θα σας επιβεβαιώσει. Αν δεν άνοιξε, καλέστε στο <a href="tel:+302311242526">2311 24 25 26</a>.</div>
-        </form>
+      <div class="booking-card reveal">
+        <div class="bk-frame">
+          <iframe title="Online ραντεβού — Calendly" loading="lazy" data-consent-src="https://calendly.com/miltoskoumplis/30min?embed_type=Inline&amp;hide_gdpr_banner=1"></iframe>
+        </div>
         <p class="emergency-note on-light"><b>Για επείγοντα</b> καλέστε απευθείας στο κινητό <a href="tel:+306974091881">6974 091 881</a>.</p>
       </div>
     </div>
@@ -263,19 +247,7 @@
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
 </button>
 
-<script>
-  window.CLINIC_BOOKING_URL = "";
-  (function(){
-    if(!window.CLINIC_BOOKING_URL) return;
-    document.querySelectorAll('[data-booking-link]').forEach(function(link){
-      link.href = window.CLINIC_BOOKING_URL;
-      link.target = '_blank';
-      link.rel = 'noopener';
-    });
-  })();
-</script>
 <script src="assets/premium.js"></script>
-<script src="assets/booking.js"></script>
 <script src="cookie-consent.js"></script>
 </body>
 </html>
